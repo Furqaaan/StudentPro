@@ -1,4 +1,9 @@
 
+1) Creating the tables
+Run the following commands in terminal
+
+php artisan migrate
+
 2) Seeding
 Run the following commands in terminal
 

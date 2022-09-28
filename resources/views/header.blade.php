@@ -11,6 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="{{url('/styles.css')}}"/>
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
+    <script type="text/javascript">
+		$.ajaxSetup({
+	       headers: {
+        	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    		}
+    	});
+	</script>
 </head>
 <body>
     <div class="nav-link-container">

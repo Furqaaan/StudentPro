@@ -43,6 +43,10 @@ tbody {
     font-size: 12px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* navBar */
 
 .nav-link-container {

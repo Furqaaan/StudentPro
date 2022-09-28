@@ -50,7 +50,7 @@ class MarkController extends Controller
             "created_at" => Carbon::now()
         ]);
 
-        return redirect()->route("viewStudents");
+        return redirect()->route("viewMarks");
     }
 
     public function editMark($id) {
