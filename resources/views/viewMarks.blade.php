@@ -23,9 +23,9 @@
                     <td>{{$mark->maths}}</td>
                     <td>{{$mark->science}}</td>
                     <td>{{$mark->history}}</td>
-                    <td>{{$mark->term}}</td>
+                    <td>{{ucwords($mark->term)}}</td>
                     <td>{{$mark->totalMarks}}</td>
-                    <td>{{$mark->created_at}}</td>
+                    <td>{{Carbon\Carbon::parse($mark->created_at)->format("M d, Y h:i A")}}</td>
                     <td>
                         <a href="{{route('editMark',["id"=>$mark->id])}}">
                             <button type="button" data-mark="{{$mark->id}}" class="btn btn-secondary">EDIT</button>
