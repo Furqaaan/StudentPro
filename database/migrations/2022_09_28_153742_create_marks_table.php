@@ -16,7 +16,7 @@ class CreateMarksTable extends Migration
         Schema::create('marks', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("student_id");
-            $table->foreign("student_id")->references("id")->on("students");
+            $table->foreign("student_id")->references("id")->on("students")->onDelete('cascade')->onUpdate('cascade');
             $table->string("term");
             $table->integer("maths");
             $table->integer("science");
